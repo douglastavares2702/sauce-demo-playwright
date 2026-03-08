@@ -1,6 +1,6 @@
 # Sauce Demo - Automação com Playwright
 
-Projeto de automação de testes **E2E** utilizando **Playwright com TypeScript** para validar o fluxo de login do site de testes **Sauce Demo**.
+Projeto de automação de testes **E2E** utilizando **Playwright com TypeScript** para validar fluxos funcionais do site de testes **Sauce Demo**.
 
 ---
 
@@ -16,8 +16,6 @@ Projeto de automação de testes **E2E** utilizando **Playwright com TypeScript*
 
 https://www.saucedemo.com/
 
-Este site é amplamente utilizado para prática de automação de testes.
-
 ---
 
 # Estrutura do projeto
@@ -32,11 +30,9 @@ sauce_demo_playwright
 ├── playwright.config.ts
 └── package.json
 
-
 ---
 
 # Padrão utilizado
-
 O projeto utiliza o padrão **Page Object Model (POM)** para melhor organização e reutilização de código.
 
 **pages** → contém as ações da página  
@@ -61,7 +57,6 @@ standard_user
 
 Senha:
 secret_sauce
-
 
 ---
 
