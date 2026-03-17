@@ -8,7 +8,9 @@ export default defineConfig({
 
   use: {
     baseURL: 'https://www.saucedemo.com/',
-    headless: !!process.env.CI,
+    headless: !!process.env.CI, 
+    // runs the browser in headless mode when tests are executed in a CI environment. 
+    // Locally, it keeps the browser visible.
     launchOptions: {
       slowMo: 500
     }
