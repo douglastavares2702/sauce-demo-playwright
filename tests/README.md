@@ -1,10 +1,10 @@
-# Sauce Demo - Automação com Playwright
+# Sauce Demo - Test Automation with Playwright
 
-Projeto de automação de testes **E2E** utilizando **Playwright com TypeScript** para validar fluxos funcionais do site de testes **Sauce Demo**.
+End-to-end (E2E) test automation project using Playwright with TypeScript to validate functional flows of the Sauce Demo test website.
 
 ---
 
-# Tecnologias utilizadas
+# Technologies
 
 - Node.js
 - TypeScript
@@ -12,13 +12,13 @@ Projeto de automação de testes **E2E** utilizando **Playwright com TypeScript*
 
 ---
 
-# Site utilizado para testes
+# Test Website
 
 https://www.saucedemo.com/
 
 ---
 
-# Estrutura do projeto
+# Project Structure
 sauce_demo_playwright
 │
 ├── pages
@@ -32,52 +32,60 @@ sauce_demo_playwright
 
 ---
 
-# Padrão utilizado
-O projeto utiliza o padrão **Page Object Model (POM)** para melhor organização e reutilização de código.
+# Design Pattern
+This project uses the Page Object Model (POM) design pattern for better organization and code reuse.
 
-**pages** → contém as ações da página  
-**tests** → contém os cenários de teste
-
----
-
-# Cenário automatizado
-
-## Login com sucesso
-
-Fluxo automatizado:
-
-1. Acessar a página inicial
-2. Informar usuário válido
-3. Informar senha válida
-4. Clicar em login
-5. Validar acesso à página de produtos
-
-Usuário utilizado:
-standard_user
-
-Senha:
-secret_sauce
+pages → page actions
+tests → test scenarios
 
 ---
 
-# Como instalar o projeto
+# Automated Scenario
+Successful Login
+Automated flow:
+Open the home page
+Enter valid username
+Enter valid password
+Click login
+Validate access to the products page
 
-Clone o repositório:
+Username: standard_user
+Password: secret_sauce
+
+---
+
+# How to Install the Project
+
+Clone the repository:
 
 ```bash
-git clone <url-do-repositorio>
+git clone <repository-url>
 
-Acesse a pasta do projeto:
+Go to the project folder:
 cd sauce_demo_playwright
 
-Instale as dependências:
+Install dependencies:
 npm install
 
-Instale os navegadores do Playwright:
+Install Playwright browsers:
 npx playwright install
 
-Executar todos os testes:
+Run all tests:
 npx playwright test
 
-Abrir o relatório HTML:
+Running Specific Tests
+npx playwright test -g "Login to saucedemo successfully"
+
+Runnig using .only
+Add .only to any test you want to run alone:
+test.only('Login to saucedemo successfully')
+-> Remember to remove ".only" after testing.
+
+Open HTML report:
 npx playwright show-report
+
+## Add product to cart Scenario
+This test adds a product to the cart and validates that the correct item was added by comparing:
+Product name
+Product price
+The values are captured dynamically from the product list and verified inside the cart.
