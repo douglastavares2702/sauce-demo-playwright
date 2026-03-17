@@ -8,7 +8,7 @@ export default defineConfig({
 
   use: {
     baseURL: 'https://www.saucedemo.com/',
-    headless: false,
+    headless: !!process.env.CI,
     launchOptions: {
       slowMo: 500
     }
